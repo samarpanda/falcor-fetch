@@ -3,35 +3,11 @@
     <script src="//netflix.github.io/falcor/build/falcor.browser.js"></script>
 <script>
 
-var $ref = falcor.Model.ref;
-var $atom = falcor.Model.atom;
-var $error = falcor.Model.error;
+var model = new falcor.Model({
+	source: new falcor.HttpDataSource('/model.json')
+});
 
-var json = {
-	titlesById: {
-		234: {
-			name: "House of Cards",
-			rating: $atom(5),
-			bookmark: $error("Something went wrong")
-		}
-	},
-	genreList: [
-		{
-			name: "Recently Watched",
-			titles: [
-				$ref("titlesById[234]")
-			]
-		},
-		{
-			name: "New Releases",
-			titles: [
-				$ref("titlesById[234]")
-			]
-		}
-	]
-};
-
-var model = new falcor.Model({cache:json});
+// /model.json?path=["genreList", 0, "titles", 0, "name"]
 
 model
 	.get('genreList[0].titles[0].["name", "rating"]')
