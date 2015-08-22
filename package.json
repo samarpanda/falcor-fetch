@@ -1,0 +1,16 @@
+{
+  "name": "falcor-fetch",
+  "version": "0.0.1",
+  "description": "Retrieving data from server using Falcor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samar Panda <samar.panda84@gmail.com> (http://samarpanda.com)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "falcor": "^0.1.12",
+    "falcor-express": "^0.1.2"
+  }
+}
