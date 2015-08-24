@@ -40,5 +40,3 @@ app.use('/model.json', falcorExpress.dataSourceRoute(function(req, res){
 	return model.asDataSource();
 }));
 app.listen(9090);
-
-console.log("Navigate to http://localhost:9090");

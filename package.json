@@ -12,5 +12,10 @@
     "express": "^4.13.3",
     "falcor": "^0.1.12",
     "falcor-express": "^0.1.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.8.2",
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^2.0.4"
   }
 }
